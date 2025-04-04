@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Powered Meeting Summary Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #E0E0E0;
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            background-color: #007BFF;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+        }
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            padding: 10px 15px;
+            border-radius: 8px;
+            background-color: #007BFF;
+            box-shadow: 0 0 10px #007BFF;
+        }
+        .navbar a:hover {
+            color: #66B2FF;
+            background-color: #0A0A0A;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #66B2FF;
+        }
+        .navbar h1 {
+            color: white;
+            animation: glow 1.5s infinite alternate;
+        }
+        .header-section {
+            background: linear-gradient(145deg, #007BFF, #1F1F1F);
+            color: white;
+            padding: 80px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            margin-bottom: 60px;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px #007BFF, 0 0 10px #007BFF, 0 0 15px #007BFF; }
+            100% { text-shadow: 0 0 10px #66B2FF, 0 0 20px #66B2FF, 0 0 30px #66B2FF; }
+        }
+        .section {
+            background-color: #121212;
+            border: 2px solid #007BFF;
+            border-radius: 15px;
+            margin: 40px;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+        }
+        .feature-card, .process-card {
+            background: #1F1F1F;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #007BFF;
+            transition: transform 0.3s, box-shadow 0.3s;
+            color: white;
+        }
+        .feature-card:hover, .process-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #66B2FF;
+        }
+        .arrow {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+        }
+        .arrow div {
+            width: 30px;
+            height: 30px;
+            border-top: 3px solid #66B2FF;
+            border-right: 3px solid #66B2FF;
+            transform: rotate(45deg);
+            transition: all 0.3s;
+        }
+        .arrow div {
+            transform: rotate(135deg) ;
+        }
+
+        #contact{
+            border: 2px solid #007BFF;
+            border-radius: 15px;  
+            margin: 40px;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>
+            <h1>Briefly</h1>
+        </div>
+        <div>
+            <a href="#features">Features</a>
+            <a href="#process">Process</a>
+            <a href="#contact">Contact</a>
+            <a href="#start recording">Start recording</a>
+        </div>
+    </div>
+
+    <div class="header-section">
+        <h1 style="font-size: 3rem;">AI Powered Meeting Summary Generator</h1>
+        <p style="font-size: 1.2rem; margin-top: 10px;">Effortlessly capture, summarize, and analyze your meeting discussions with advanced AI tools.</p>
+    </div>
+
+    <div class="section" id="features">
+        <h2 style="color: #007BFF; text-align: center; margin-bottom: 30px;">Features</h2>
+        <div class="grid grid-cols-2 gap-6">
+            <div class="feature-card">Speech-to-Text Conversion: Converts spoken words to text in real-time for accurate transcription.</div>
+            <div class="feature-card">Real-Time Summarization: Provides instant summaries during meetings for quick understanding.</div>
+            <div class="feature-card">Keyword Extraction: Extracts important keywords for easy reference and retrieval.</div>
+            <div class="feature-card">Bullet Point Summaries: Generates concise bullet point summaries for clarity and readability.</div>
+            <div class="feature-card">Action Items Tracker: Automatically tracks decisions made and tasks assigned during meetings.</div>
+            <div class="feature-card">Sentiment Analysis: Analyzes the tone of conversations to provide better insights.</div>
+        </div>
+    </div>
+
+    <div class="section" id="process">
+        <h2 style="color: #007BFF; text-align: center; margin-bottom: 30px;">Process</h2>
+        <div class="process-card">Step 1: Input Audio/Text- Upload audio files or input text directly for analysis.</div>
+        <div class="arrow"><div></div></div>
+        <div class="process-card">Step 2: Analysis-  The AI breaks down the data to identify essential points.</div>
+        <div class="arrow"><div></div></div>
+        <div class="process-card">Step 3: Text Conversion-  Converts speech to text accurately.</div>
+        <div class="arrow"><div></div></div>
+        <div class="process-card">Step 4: Summarization-  Generates concise summaries from detailed inputs.
+
+        </div>
+        <div class="arrow"><div></div></div>
+        <div class="process-card">Step 5: Keyword Extraction-  Highlights crucial keywords for better comprehension.</div>
+        <div class="arrow"><div></div></div>
+        <div class="process-card">Step 6: Analytics & Export- Provides insights and allows exporting results.</div>
+    </div>
+
+    <footer id="contact">
+        <p>Contact Us: contact@meetinggenerator.com | Phone: +1 123 456 7890</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
